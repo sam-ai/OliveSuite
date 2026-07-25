@@ -15,7 +15,6 @@ import {
   Mic2,
   Network,
   Pause,
-  Play,
   ShieldCheck,
   Volume2,
   Waves,
@@ -303,26 +302,25 @@ function IntelligencePanel({ panelRef }: { panelRef: React.RefObject<HTMLDivElem
           </div>
         </div>
 
-        <div className="relative min-h-[360px] overflow-hidden bg-[#081120] p-5 sm:p-7">
-          <div
-            role="img"
-            aria-label="Research workstation with local AI visualization"
-            className="absolute inset-0 bg-[radial-gradient(circle_at_50%_35%,rgba(94,230,255,0.26),transparent_34%),radial-gradient(circle_at_42%_56%,rgba(163,181,101,0.18),transparent_28%),linear-gradient(135deg,#081120_0%,#1B2433_54%,#050912_100%)]"
-          />
-          <div className="absolute inset-x-8 bottom-20 h-28 rounded-t-lg border border-[#5EE6FF]/20 bg-[#081120]/70 shadow-[0_0_70px_rgba(94,230,255,0.18)]" />
-          <div className="absolute bottom-14 left-1/2 h-5 w-44 -translate-x-1/2 rounded-b-md border border-white/10 bg-[#1B2433]" />
-          <div className="absolute left-1/2 top-1/2 grid h-40 w-40 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full border border-[#5EE6FF]/30 bg-[#5EE6FF]/10 shadow-[0_0_80px_rgba(94,230,255,0.24)] backdrop-blur">
-            <Play className="h-11 w-11 text-[#5EE6FF]" />
-          </div>
-          <div className="relative flex h-full min-h-[300px] flex-col justify-between">
-            <div className="self-end rounded-full border border-white/20 bg-black/25 px-3 py-1 text-xs text-[#F6F2EA]/75 backdrop-blur">
+        <div className="relative flex min-h-[360px] flex-col overflow-hidden bg-[#081120]">
+          <div className="relative min-h-[280px] flex-1">
+            <video
+              className="absolute inset-0 h-full w-full object-cover"
+              src="/video/avatar.mp4"
+              controls
+              playsInline
+              preload="metadata"
+              aria-label="Live Odia voice intelligence demo video"
+            >
+              <track kind="captions" />
+            </video>
+            <div className="pointer-events-none absolute right-4 top-4 rounded-full border border-white/20 bg-black/25 px-3 py-1 text-xs text-[#F6F2EA]/75 backdrop-blur">
               No cloud dependency
             </div>
-            <div />
-            <p className="max-w-sm text-sm leading-6 text-[#F6F2EA]/75">
-              Private speech, retrieval, and reasoning loops that keep user data on owned hardware.
-            </p>
           </div>
+          <p className="relative max-w-full border-t border-white/10 p-5 text-sm leading-6 text-[#F6F2EA]/75 sm:px-7">
+            Private speech, retrieval, and reasoning loops that keep user data on owned hardware.
+          </p>
         </div>
       </div>
     </section>
