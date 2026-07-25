@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Oriya:wght@400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 217 60% 8%;
+  --foreground: 40 40% 94%;
+  --card: 218 29% 13%;
+  --card-foreground: 40 40% 94%;
+  --primary: 73 34% 55%;
+  --primary-foreground: 217 60% 8%;
+  --secondary: 218 29% 17%;
+  --secondary-foreground: 40 40% 94%;
+  --muted: 218 24% 19%;
+  --muted-foreground: 40 14% 72%;
+  --accent: 188 100% 68%;
+  --accent-foreground: 217 60% 8%;
+  --destructive: 0 72% 51%;
+  --destructive-foreground: 40 40% 94%;
+  --border: 0 0% 100%;
+  --input: 0 0% 100%;
+  --ring: 188 100% 68%;
+  color: #f6f2ea;
+  background: #081120;
+  font-family: Inter, Geist, system-ui, sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.dark {
+  --background: 217 60% 8%;
+  --foreground: 40 40% 94%;
+  --card: 218 29% 13%;
+  --card-foreground: 40 40% 94%;
+  --primary: 73 34% 55%;
+  --primary-foreground: 217 60% 8%;
+  --secondary: 218 29% 17%;
+  --secondary-foreground: 40 40% 94%;
+  --muted: 218 24% 19%;
+  --muted-foreground: 40 14% 72%;
+  --accent: 188 100% 68%;
+  --accent-foreground: 217 60% 8%;
+  --destructive: 0 72% 51%;
+  --destructive-foreground: 40 40% 94%;
+  --border: 0 0% 100%;
+  --input: 0 0% 100%;
+  --ring: 188 100% 68%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: #081120;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
