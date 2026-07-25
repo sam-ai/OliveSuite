@@ -305,7 +305,8 @@ function IntelligencePanel({ panelRef }: { panelRef: React.RefObject<HTMLDivElem
         <div className="relative flex min-h-[360px] flex-col overflow-hidden bg-[#081120]">
           <div className="relative min-h-[280px] flex-1">
             <video
-              className="absolute inset-0 h-full w-full object-cover object-top"
+              className="absolute inset-0 h-full w-full object-cover"
+              style={{ objectPosition: "50% 20%" }}
               src="/video/avatar.mp4"
               controls
               playsInline
